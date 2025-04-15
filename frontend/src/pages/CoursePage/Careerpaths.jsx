@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { AuthContext } from '../../context/AuthContext';
 import Layout from '../../components/CoursePage/Layout';
 
@@ -39,7 +39,7 @@ function CareerPaths() {
             <div key={path.id} className="p-6 bg-[#1E1F27] rounded-3xl border border-[#3E3F46] hover:border-blue-500 transition-all duration-300">
               <h2 className="text-xl font-semibold text-white mb-2">{path.title}</h2>
               <p className="text-gray-400">{path.description}</p>
-              <button className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors" onClick={() => alert(`Memulai jalur karir: ${path.title}`)}>
+              <button className="cursor-pointer mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors" onClick={() => alert(`Memulai jalur karir: ${path.title}`)}>
                 Mulai Jalur Ini
               </button>
             </div>

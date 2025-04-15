@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from 'react';
+import { useContext, useState, useEffect } from 'react';
 import { AuthContext } from '../../context/AuthContext';
 import iconSearch from '../../assets/Search.svg';
 
@@ -32,7 +32,7 @@ const Topbar = () => {
       <div className="ml-[2rem] mr-[2rem] py-3 flex justify-between w-full">
         {/* Search Bar */}
         <div className="flex items-center bg-[#14151D] rounded-full px-5 gap-12">
-          <div className="text-[#949DA0]">Search Here</div>
+          <input className="text-[#949DA0]" type="button" value="Seacrh Here" />
           <img src={iconSearch} alt="icon search" />
         </div>
 
