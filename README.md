@@ -47,6 +47,7 @@ FlexNative adalah aplikasi web full-stack yang dirancang sebagai platform pembel
 
 ## 📁 Struktur Folder
 
+```text
 web-app/
 ├── backend/
 │ ├── config/ # Konfigurasi (DB, Passport)
@@ -86,6 +87,7 @@ web-app/
 │ └── vite.config.js # Konfigurasi Vite
 │
 └── .gitignore # File/folder yang diabaikan Git
+```
 
 ## 🚀 Instalasi & Setup
 
