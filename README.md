@@ -17,7 +17,7 @@ FlexNative adalah aplikasi web full-stack yang dirancang sebagai platform pembel
 *   **Bookmark Kursus:** Menyimpan kursus yang diminati (fitur di AuthContext).
 *   **Jalur Karir (Career Paths):** Kemampuan untuk menambahkan kursus ke jalur karir (fitur di AuthContext).
 *   **Landing Page:** Halaman perkenalan yang menarik untuk pengguna baru.
-*   **Desain Responsif:** Antarmuka pengguna yang beradaptasi dengan berbagai ukuran layar.
+*   **Desain Responsif:** Tampilan yang responsif terhadap berbagai ukuran layar perangkat.
 
 ## 💻 Teknologi yang Digunakan
 
