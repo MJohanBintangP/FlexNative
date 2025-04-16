@@ -2,6 +2,7 @@ const express = require('express');
 const Course = require('../models/Course');
 const router = express.Router();
 
+// ➤ 1. Get All Courses
 router.get('/', async (req, res) => {
   try {
     const courses = await Course.find();
@@ -11,6 +12,7 @@ router.get('/', async (req, res) => {
   }
 });
 
+// ➤ 2. Create New Course
 router.post('/', async (req, res) => {
   const { title, description, content, videoUrl } = req.body;
   try {
@@ -22,6 +24,7 @@ router.post('/', async (req, res) => {
   }
 });
 
+// ➤ 3. Update Course
 router.put('/:id', async (req, res) => {
   try {
     const updatedCourse = await Course.findByIdAndUpdate(req.params.id, req.body, { new: true });
@@ -31,6 +34,7 @@ router.put('/:id', async (req, res) => {
   }
 });
 
+// ➤ 4. Delete Course
 router.delete('/:id', async (req, res) => {
   try {
     await Course.findByIdAndDelete(req.params.id);

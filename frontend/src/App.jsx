@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useContext, useEffect, useState } from 'react';
 import axios from 'axios';
 import { AuthContext, AuthProvider } from './context/AuthContext';
+import { CourseProvider } from './context/CourseContext';
 import LandingPage from './pages/LandingPage';
 import Course from './pages/Course';
 import Author from './pages/LandingPage/Author';
@@ -44,9 +45,11 @@ function AppContent() {
 function App() {
   return (
     <AuthProvider>
-      <Router>
-        <AppContent />
-      </Router>
+      <CourseProvider>
+        <Router>
+          <AppContent />
+        </Router>
+      </CourseProvider>
     </AuthProvider>
   );
 }

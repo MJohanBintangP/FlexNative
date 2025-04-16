@@ -24,7 +24,8 @@ function Sidebar() {
   return (
     <div className="w-64 h-screen bg-[#1E1F27] text-white fixed top-0 left-0 p-4 outline-[#3E3F46] outline">
       <div className="ml-2">
-        <img className="w-[120px] mt-[1rem] mb-[2.5rem]" src={LogoFlexNative} alt="LogoFlexNative" />
+      <img className="w-[150px] mt-[1rem] mb-[2.5rem] ml-[1rem]" src={LogoFlexNative} alt="LogoFlexNative" />
+
         <ul className="space-y-4">
           {navItems.map((item, index) => (
             <li key={index}>

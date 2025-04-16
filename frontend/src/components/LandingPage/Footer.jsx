@@ -1,3 +1,4 @@
+import React from 'react';
 import logoFlexnative from '../../assets/logoFlexnative.png';
 import instagramIcon from '../../assets/Instagram.svg';
 import twitterIcon from '../../assets/Twitter.svg';
@@ -9,8 +10,10 @@ const Footer = () => {
   return (
     <footer className="relative bottom-0 bg-[#1E1F27] w-full h-auto">
       <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center max-w-[1400px] mx-auto py-12 px-6 gap-6">
-        <h1 className="text-white text-3xl lg:text-4xl font-bold max-w-[550px]">Ready to take your React Native skills to the next level?</h1>
-        <button className="cursor-pointer text-white text-sm bg-[#5627FF] px-6 py-3 rounded-[8px]" type="submit">
+        <h1 className="text-white text-3xl lg:text-4xl font-bold max-w-[550px]">
+          Ready to take your React Native skills to the next level?
+        </h1>
+        <button className="text-white text-sm bg-[#5627FF] px-6 py-3 rounded-[8px]" type="submit">
           Get Started
         </button>
       </div>
