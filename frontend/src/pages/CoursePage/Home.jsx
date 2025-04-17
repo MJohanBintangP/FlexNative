@@ -1,8 +1,7 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { AuthContext } from '../../context/AuthContext';
 import Layout from '../../components/CoursePage/Layout';
 
-// Data Kursus
 const courses = [
   {
     id: 1,
@@ -14,13 +13,13 @@ const courses = [
     id: 2,
     title: 'State Management dengan Redux',
     description: 'Memahami cara mengelola state di React Native menggunakan Redux.',
-    progress: 50, 
+    progress: 50,
   },
   {
     id: 3,
     title: 'Integrasi API di React Native',
     description: 'Belajar cara mengambil dan mengirim data menggunakan REST API.',
-    progress: 25, 
+    progress: 25,
   },
 ];
 
@@ -29,7 +28,6 @@ function Home() {
 
   return (
     <Layout>
-
       <div className="p-6">
         <h1 className="text-2xl font-bold text-white mb-4">Welcome to FlexNative, {user?.name || 'Pengguna'}</h1>
         <p className="text-gray-400 mb-8">Check out these exciting courses you can start learning today!</p>

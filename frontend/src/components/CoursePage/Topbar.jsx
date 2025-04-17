@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from 'react';
+import { useContext, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthContext';
 import { useCourses } from '../../context/CourseContext';
@@ -20,9 +20,7 @@ const Topbar = () => {
   const handleSearch = (query) => {
     setSearchQuery(query);
     if (query.length > 0) {
-      const filtered = courses.filter(course =>
-        course.title.toLowerCase().includes(query.toLowerCase())
-      );
+      const filtered = courses.filter((course) => course.title.toLowerCase().includes(query.toLowerCase()));
       setSearchResults(filtered);
       setShowSearchDropdown(true);
     } else {
@@ -41,7 +39,7 @@ const Topbar = () => {
     const handleClickOutside = (event) => {
       const dropdownContainer = document.querySelector('.profile-dropdown');
       const searchContainer = document.querySelector('.search-container');
-      
+
       if (dropdownContainer && !dropdownContainer.contains(event.target)) {
         setIsDropdownOpen(false);
       }
@@ -79,11 +77,7 @@ const Topbar = () => {
               onFocus={() => searchQuery && setShowSearchDropdown(true)}
             />
             <button className="pr-3 flex-shrink-0">
-              <img
-                src={iconSearch}
-                alt="icon search"
-                className="w-5 h-5"
-              />
+              <img src={iconSearch} alt="icon search" className="w-5 h-5" />
             </button>
           </div>
 
@@ -91,28 +85,22 @@ const Topbar = () => {
             <div className="absolute top-full left-0 right-0 mt-2 bg-gradient-to-b from-[#1E1F27] to-[#2A2B32] rounded-lg shadow-xl z-50 max-h-60 overflow-y-auto custom-scrollbar">
               <div className="p-2 space-y-1">
                 {searchResults.length > 0 ? (
-                  searchResults.map(course => (
+                  searchResults.map((course) => (
                     <div
                       key={course._id}
                       className="group px-4 py-3 hover:bg-gradient-to-r hover:from-blue-500/20 hover:to-purple-500/20 cursor-pointer transition-all duration-200 rounded-lg transform hover:scale-[1.02]"
                       onClick={() => handleSelectCourse(course)}
                     >
-                      <div className="text-white font-medium truncate group-hover:text-blue-400 transition-colors">
-                        {course.title}
-                      </div>
+                      <div className="text-white font-medium truncate group-hover:text-blue-400 transition-colors">{course.title}</div>
                       <div className="text-sm text-gray-400 mt-1 flex items-center gap-2">
-                        <span className="px-2 py-1 bg-[#3E3F46] rounded-full text-xs">
-                          {course.level}
-                        </span>
+                        <span className="px-2 py-1 bg-[#3E3F46] rounded-full text-xs">{course.level}</span>
                         <span className="text-xs">•</span>
                         <span className="text-xs">{course.duration}</span>
                       </div>
                     </div>
                   ))
                 ) : (
-                  <div className="px-4 py-3 text-gray-400 italic">
-                    No matching courses found...
-                  </div>
+                  <div className="px-4 py-3 text-gray-400 italic">No matching courses found...</div>
                 )}
               </div>
             </div>
@@ -131,10 +119,7 @@ const Topbar = () => {
           {isDropdownOpen && (
             <div className="absolute top-full right-0 mt-2 w-48 bg-[#1E1F27] rounded-lg shadow-lg z-10">
               <ul className="py-2">
-                <li
-                  className="px-6 py-2 text-white hover:bg-red-600 hover:text-white cursor-pointer rounded-lg"
-                  onClick={handleLogout}
-                >
+                <li className="px-6 py-2 text-white hover:bg-red-600 hover:text-white cursor-pointer rounded-lg" onClick={handleLogout}>
                   Logout
                 </li>
               </ul>
