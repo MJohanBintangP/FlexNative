@@ -7,7 +7,7 @@ const Navbar = ({ user }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleLogin = () => {
-    window.location.href = 'http://localhost:5000/auth/google';
+    window.location.href = 'https://backend-production-5845.up.railway.app/auth/google';
   };
 
   const toggleMenu = () => {
