@@ -16,16 +16,19 @@ function AppContent() {
   const { isLoading } = useContext(AuthContext);
   const [setIsAuthenticated] = useState(false);
 
+  // ✅ Ambil URL dari environment variable
+  const backendURL = import.meta.env.VITE_BACKEND_URL;
+
   useEffect(() => {
     axios
-      .get('http://localhost:5000/auth/user', { withCredentials: true })
+      .get(`${backendURL}/auth/user`, { withCredentials: true })
       .then((res) => {
         if (res.data) {
           setIsAuthenticated(true);
         }
       })
       .catch(() => setIsAuthenticated(false));
-  }, [setIsAuthenticated]);
+  }, [backendURL, setIsAuthenticated]);
 
   if (isLoading) return <img src={logoFlexnative} alt="Load" />;
 

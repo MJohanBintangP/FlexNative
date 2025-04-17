@@ -13,7 +13,7 @@
     "@phosphor-icons/react": "^2.1.7",
     "@tailwindcss/vite": "^4.0.8",
     "@types/react-router-dom": "^5.3.3",
-    "axios": "^1.7.9",
+    "axios": "^1.8.4",
     "phosphor-react": "^1.4.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
