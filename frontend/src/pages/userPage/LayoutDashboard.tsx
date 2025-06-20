@@ -9,6 +9,10 @@ export default function LayoutDashboard() {
   const navigate = useNavigate();
 
   useEffect(() => {
+    document.title = 'FlexNative | Dashboard';
+  }, []);
+
+  useEffect(() => {
     const checkScreenSize = () => {
       setIsMobileDevice(window.innerWidth < 1024);
     };

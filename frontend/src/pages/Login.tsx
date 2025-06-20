@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import logo from '../assets/logo.svg';
+import { useEffect } from 'react';
 
 export default function Login() {
   const navigate = useNavigate();
@@ -8,6 +9,10 @@ export default function Login() {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    document.title = 'FlexNative | Login';
+  }, []);
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();

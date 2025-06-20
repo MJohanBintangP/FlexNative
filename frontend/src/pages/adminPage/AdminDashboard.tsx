@@ -2,9 +2,14 @@ import { useState } from 'react';
 import AdminNavbar from '../../components/adminPage/AdminNavbar';
 import UserManagement from './UserManagement';
 import CourseManagement from './CourseManagement';
+import { useEffect } from 'react';
 
 export default function AdminDashboard() {
   const [activeTab, setActiveTab] = useState('users');
+
+  useEffect(() => {
+    document.title = 'FlexNative | AdminDashboard';
+  }, []);
 
   return (
     <div className="bg-white h-screen flex overflow-hidden">
