@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { BookmarkSimpleIcon } from '@phosphor-icons/react';
 import { useNavigate } from 'react-router-dom';
+import ilustrasi from '../../assets/ilustrasi.svg';
 
 interface Course {
   id: number;
@@ -139,7 +140,7 @@ export default function Bookmarks() {
   if (bookmarks.length === 0) {
     return (
       <div className="py-6 flex flex-col items-center justify-center h-[70vh]">
-        <img src="/src/assets/ilustrasi.svg" alt="No bookmarks" className="w-64 mb-4" />
+        <img src={ilustrasi} alt="No bookmarks" className="w-64 mb-4" />
         <h2 className="text-xl font-semibold mb-2">Belum ada bookmark !</h2>
         <p className="text-gray-500">Anda belum menyimpan kursus apapun</p>
       </div>
@@ -210,5 +211,5 @@ const getYouTubeVideoId = (url: string | undefined): string => {
     }
   }
 
-  return '0-S5a0eXPoc'; // Default video ID - React Native Tutorial
+  return '0-S5a0eXPoc';
 };

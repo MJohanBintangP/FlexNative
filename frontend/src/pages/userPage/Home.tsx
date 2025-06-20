@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import ilustrasi from '../../assets/ilustrasi.svg';
 
 interface UserProfile {
   username: string;
@@ -352,7 +353,7 @@ export default function Home() {
                   </div>
                 ) : (
                   <div className="flex flex-col items-center justify-center py-8">
-                    <img src="/src/assets/ilustrasi.svg" alt="Tidak ada aktivitas" className="w-52 mb-4" />
+                    <img src={ilustrasi} alt="Tidak ada aktivitas" className="w-52 mb-4" />
                     <p className="text-gray-500">Belum ada aktivitas terbaru !</p>
                   </div>
                 )}
