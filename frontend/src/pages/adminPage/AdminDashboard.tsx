@@ -1,15 +1,43 @@
-import { useState } from 'react';
 import AdminNavbar from '../../components/adminPage/AdminNavbar';
 import UserManagement from './UserManagement';
 import CourseManagement from './CourseManagement';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export default function AdminDashboard() {
   const [activeTab, setActiveTab] = useState('users');
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsSmallScreen(window.innerWidth < 1024);
+    };
+
+    checkScreenSize();
+
+    window.addEventListener('resize', checkScreenSize);
+
+    return () => {
+      window.removeEventListener('resize', checkScreenSize);
+    };
+  }, []);
 
   useEffect(() => {
     document.title = 'FlexNative | AdminDashboard';
   }, []);
+
+  if (isSmallScreen) {
+    return (
+      <div className="flex flex-col items-center justify-center min-h-screen p-8 md:p-30 text-center">
+        <h1 className="text-3xl md:text-4xl font-bold text-black mb-4">Perangkat Tidak Didukung !</h1>
+        <p className="text-[#737373] text-md md:text-lg mb-6">Web ini sementara belum mendukung ukuran layar dari device anda. Silakan akses menggunakan perangkat desktop atau laptop untuk pengalaman terbaik.</p>
+        <button onClick={() => navigate('/')} className="cursor-pointer mt-6 bg-blue-500 text-white px-6 md:px-8 py-2 rounded-xl font-medium">
+          Kembali ke Beranda
+        </button>
+      </div>
+    );
+  }
 
   return (
     <div className="bg-white h-screen flex overflow-hidden">
