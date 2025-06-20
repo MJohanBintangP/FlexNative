@@ -53,7 +53,7 @@ export default function Courses() {
       console.log('Attempting to fetch courses with token:', token.substring(0, 10) + '...');
 
       try {
-        const response = await fetch('http://localhost:8080/api/courses', {
+        const response = await fetch('https://flexnative.mjohanbintangp.tech/api/courses', {
           headers: {
             Authorization: `Bearer ${token}`,
             'Content-Type': 'application/json',
@@ -130,7 +130,7 @@ export default function Courses() {
         throw new Error('No authentication token found');
       }
 
-      const response = await fetch('http://localhost:8080/api/bookmarks/toggle', {
+      const response = await fetch('https://flexnative.mjohanbintangp.tech/api/bookmarks/toggle', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

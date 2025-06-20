@@ -20,7 +20,7 @@ export default function AdminNavbar({ activeTab, setActiveTab }: AdminNavbarProp
       return;
     }
 
-    fetch('http://localhost:8080/api/user/profile', {
+    fetch('https://flexnative.mjohanbintangp.tech/api/user/profile', {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then((res) => {

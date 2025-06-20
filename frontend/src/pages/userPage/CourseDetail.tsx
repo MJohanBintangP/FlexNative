@@ -64,7 +64,7 @@ export default function CourseDetail() {
           return;
         }
 
-        const response = await fetch(`http://localhost:8080/api/courses/${id}`, {
+        const response = await fetch(`https://flexnative.mjohanbintangp.tech/api/courses/${id}`, {
           headers: {
             Authorization: `Bearer ${token}`,
             'Content-Type': 'application/json',
@@ -167,7 +167,7 @@ export default function CourseDetail() {
         return;
       }
 
-      await fetch('http://localhost:8080/api/user/record-activity', {
+      await fetch('https://flexnative.mjohanbintangp.tech/api/user/record-activity', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -192,7 +192,7 @@ export default function CourseDetail() {
         throw new Error('No authentication token found');
       }
 
-      const response = await fetch('http://localhost:8080/api/bookmarks/toggle', {
+      const response = await fetch('https://flexnative.mjohanbintangp.tech/api/bookmarks/toggle', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -227,7 +227,7 @@ export default function CourseDetail() {
       const courseId = parseInt(id as string);
       console.log('Sending progress update:', { courseId, moduleId, completed: true });
 
-      const response = await fetch('http://localhost:8080/api/courses/progress', {
+      const response = await fetch('https://flexnative.mjohanbintangp.tech/api/courses/progress', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -519,7 +519,7 @@ const syncCompletedCourses = async () => {
       return;
     }
 
-    await fetch('http://localhost:8080/api/user/sync-completed-courses', {
+    await fetch('https://flexnative.mjohanbintangp.tech/api/user/sync-completed-courses', {
       method: 'POST',
       headers: {
         Authorization: `Bearer ${token}`,

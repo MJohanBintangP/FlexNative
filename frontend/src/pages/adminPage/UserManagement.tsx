@@ -35,7 +35,7 @@ export default function UserManagement() {
       }
 
       console.log('Fetching users from API...');
-      const response = await fetch('http://localhost:8080/api/admin/users', {
+      const response = await fetch('https://flexnative.mjohanbintangp.tech/api/admin/users', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -74,7 +74,7 @@ export default function UserManagement() {
 
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`http://localhost:8080/api/admin/users/${editingUser.id}`, {
+      const response = await fetch(`https://flexnative.mjohanbintangp.tech/api/admin/users/${editingUser.id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -103,7 +103,7 @@ export default function UserManagement() {
     try {
       setLoading(true);
       const token = localStorage.getItem('token');
-      const response = await fetch(`http://localhost:8080/api/admin/users/${userToDelete.id}`, {
+      const response = await fetch(`https://flexnative.mjohanbintangp.tech/api/admin/users/${userToDelete.id}`, {
         method: 'DELETE',
         headers: {
           Authorization: `Bearer ${token}`,

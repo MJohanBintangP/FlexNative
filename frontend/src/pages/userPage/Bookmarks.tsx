@@ -31,7 +31,7 @@ export default function Bookmarks() {
           throw new Error('No authentication token found');
         }
 
-        const response = await fetch('http://localhost:8080/api/bookmarks', {
+        const response = await fetch('https://flexnative.mjohanbintangp.tech/api/bookmarks', {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -97,7 +97,7 @@ export default function Bookmarks() {
         throw new Error('No authentication token found');
       }
 
-      const response = await fetch('http://localhost:8080/api/bookmarks/toggle', {
+      const response = await fetch('https://flexnative.mjohanbintangp.tech/api/bookmarks/toggle', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

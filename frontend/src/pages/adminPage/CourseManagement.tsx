@@ -51,7 +51,7 @@ export default function CourseManagement() {
         return;
       }
 
-      const response = await fetch('http://localhost:8080/api/courses', {
+      const response = await fetch('https://flexnative.mjohanbintangp.tech/api/courses', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -88,7 +88,7 @@ export default function CourseManagement() {
 
       console.log(`Menghapus kursus dengan ID: ${courseToDelete.id}`);
 
-      const response = await fetch(`http://localhost:8080/api/admin/courses/${courseToDelete.id}`, {
+      const response = await fetch(`https://flexnative.mjohanbintangp.tech/api/admin/courses/${courseToDelete.id}`, {
         method: 'DELETE',
         headers: {
           Authorization: `Bearer ${token}`,
@@ -194,7 +194,7 @@ export default function CourseManagement() {
       const videoId = getYouTubeVideoId(newCourse.videoUrl);
       const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
 
-      const response = await fetch('http://localhost:8080/api/admin/courses', {
+      const response = await fetch('https://flexnative.mjohanbintangp.tech/api/admin/courses', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

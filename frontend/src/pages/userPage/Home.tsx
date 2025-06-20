@@ -70,7 +70,7 @@ export default function Home() {
       }
 
       console.log('Fetching user profile...');
-      const profileResponse = await fetch('http://localhost:8080/api/user/profile', {
+      const profileResponse = await fetch('https://flexnative.mjohanbintangp.tech/api/user/profile', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -106,7 +106,7 @@ export default function Home() {
         return;
       }
 
-      const activitiesResponse = await fetch('http://localhost:8080/api/user/activities', {
+      const activitiesResponse = await fetch('https://flexnative.mjohanbintangp.tech/api/user/activities', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -147,7 +147,7 @@ export default function Home() {
       }
 
       console.log('Fetching recommended courses...');
-      const coursesResponse = await fetch('http://localhost:8080/api/user/recommended-courses', {
+      const coursesResponse = await fetch('https://flexnative.mjohanbintangp.tech/api/user/recommended-courses', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -188,7 +188,7 @@ export default function Home() {
       }
 
       console.log('Syncing user progress...');
-      const response = await fetch('http://localhost:8080/api/user/sync-progress', {
+      const response = await fetch('https://flexnative.mjohanbintangp.tech/api/user/sync-progress', {
         method: 'POST',
         headers: {
           Authorization: `Bearer ${token}`,

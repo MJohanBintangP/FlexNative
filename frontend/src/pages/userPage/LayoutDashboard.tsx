@@ -28,7 +28,7 @@ export default function LayoutDashboard() {
 
     const token = localStorage.getItem('token');
     if (token) {
-      fetch('http://localhost:8080/api/user/profile', {
+      fetch('https://flexnative.mjohanbintangp.tech/api/user/profile', {
         headers: { Authorization: `Bearer ${token}` },
       })
         .then((res) => {

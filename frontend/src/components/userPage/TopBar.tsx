@@ -100,7 +100,7 @@ export default function TopBar({ username = 'User' }: TopBarProps) {
         return;
       }
 
-      const response = await fetch(`http://localhost:8080/api/courses/search?q=${encodeURIComponent(query)}`, {
+      const response = await fetch(`https://flexnative.mjohanbintangp.tech/api/courses/search?q=${encodeURIComponent(query)}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
