@@ -114,9 +114,9 @@ export default function Login() {
             </button>
 
             <p className="text-sm text-gray-600 mt-6 text-center">
-              Don't have an account?{' '}
+              Belum punya akun?{' '}
               <span className="text-[#2B7FFF] hover:underline cursor-pointer font-medium" onClick={() => navigate('/Register')}>
-                Sign Up
+                Daftar
               </span>
             </p>
           </form>

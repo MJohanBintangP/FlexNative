@@ -65,7 +65,7 @@ export default function Register() {
               <input
                 id="username"
                 type="text"
-                placeholder="Masukkan nama kamu"
+                placeholder="Buat username baru"
                 className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#2B7FFF] focus:border-transparent transition-all text-sm"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
@@ -95,7 +95,7 @@ export default function Register() {
               <input
                 id="password"
                 type="password"
-                placeholder="Masukkan password kamu"
+                placeholder="Buat password baru"
                 className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#2B7FFF] focus:border-transparent transition-all text-sm"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
