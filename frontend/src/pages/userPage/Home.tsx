@@ -337,7 +337,7 @@ export default function Home() {
                 </div>
 
                 {recentActivities.length > 0 ? (
-                  <div className="space-y-4 max-h-55 overflow-y-auto pr-2">
+                  <div className="space-y-4 max-h-80 overflow-y-auto pr-2">
                     {recentActivities.slice(0, 10).map((activity) => (
                       <div key={activity.id} className="flex items-center gap-3 p-3 hover:bg-gray-50 rounded-lg">
                         {getActivityIcon(activity.type)}
